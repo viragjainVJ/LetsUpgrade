@@ -1,4 +1,4 @@
-## Various Methods in Console:
+## 1. Various Methods in Console:
 ```
 log()
 error()
@@ -73,13 +73,13 @@ console.log('new section');
          italic; border: 1px solid black; font-size: 2em;`; 
   console.log('%cGeeks for Geeks', styles); 
 ```
-## Difference Between var, let and const
+## 2. Difference Between var, let and const
 - var declarations are globally scoped or function scoped while let and const are block scoped.
 - var variables can be updated and re-declared within its scope, let variables can be updated but not re-declared, const variables can neither be updated nor re-declared
 - They are all hoisted to the top of their scope. But while var variables are initialized with undefined, let and const variables are not initialized.
 - While var and let can be declared without being initialized, const must be initialized during declaration.
 
-## DataTypes in JS
+## 3. DataTypes in JS
 - **Number**
 The number type represents both integer and floating point numbers.
 There are many operations for numbers, e.g. multiplication *, division /, addition +, subtraction -, and so on.
