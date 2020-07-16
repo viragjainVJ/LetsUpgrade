@@ -77,3 +77,54 @@ var str = "HELLO WORLD";
 str.charCodeAt(0); 
 ```
 
+## JS Array Methods
+**Converting Arrays to Strings**
+The JavaScript method toString() converts an array to a string of (comma separated) array values.
+```
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.toString();
+```
+The join() method also joins all array elements into a string.
+
+It behaves just like toString(), but in addition you can specify the separator:
+```
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.join(" * ");
+```
+**Popping and Pushing**
+When you work with arrays, it is easy to remove elements and add new elements.
+Popping items out of an array, or pushing items into an array.
+```
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.pop(); 
+
+fruits.push("Kiwi"); 
+```
+**Deleting Elements**
+Since JavaScript arrays are objects, elements can be deleted by using the JavaScript operator delete:
+```
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+delete fruits[0]; 
+```
+**Splicing an Array**
+The splice() method can be used to add new items to an array:
+```
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+```
+- The first parameter (2) defines the position where new elements should be added (spliced in).
+- The second parameter (0) defines how many elements should be removed.
+- The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+**Merging (Concatenating) Arrays**
+The concat() method creates a new array by merging (concatenating) existing arrays:
+```
+var myGirls = ["Cecilie", "Lone"];
+var myBoys = ["Emil", "Tobias", "Linus"];
+var myChildren = myGirls.concat(myBoys); 
+```
+**Slicing an Array**
+The slice() method slices out a piece of an array into a new array.
+```
+var f = ["a", "b", "c", "d", "e"];
+var demo = f.slice(1);
+```
