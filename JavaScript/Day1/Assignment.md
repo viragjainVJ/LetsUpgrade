@@ -78,6 +78,30 @@ console.log('new section');
 - var variables can be updated and re-declared within its scope, let variables can be updated but not re-declared, const variables can neither be updated nor re-declared
 - They are all hoisted to the top of their scope. But while var variables are initialized with undefined, let and const variables are not initialized.
 - While var and let can be declared without being initialized, const must be initialized during declaration.
+```
+//var
+ var greeter = "hey hi";
+    
+ function newFunction() {
+     var hello = "hello";
+ }
+ 
+ // let
+ let greeting = "say Hi";
+ let times = 4;
+
+ if (times > 3) {
+      let hello = "say Hello instead";
+      console.log(hello);// "say Hello instead"
+  }
+ console.log(hello) // hello is not defined
+ 
+ //const
+ const greeting = {
+        message: "say Hi",
+        times: 4
+    }
+ ```
 
 ## 3. DataTypes in JS
 - **Number**
