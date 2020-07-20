@@ -1,13 +1,12 @@
 let forLoop = function(){
     let html = '<ul>';
     for(let i=1; i<=100; i++){
-        if(i%3 == 0){
-            html += `<li>fizz (${i})</li>`
+        if(i%3 == 0 && i%5 == 0){
+            html += `<li>fizzbuzz (${i})</li>`
         } else if(i%5 == 0) {
             html += `<li>buzz (${i})</li>`
-        }
-        if(i%3 == 0 && i%5 == 0) {
-            html += `<li>fizzbuzz (${i})</li>`
+        } else if(i%3 == 0) {
+            html += `<li>fizz (${i})</li>`
         }
     }
     html += '</ul>';
