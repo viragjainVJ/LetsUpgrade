@@ -14,6 +14,20 @@
                 margin: 4px 2px;
                 cursor: pointer;
                 }
+                
+            .calculator tbody tr td button{
+                width: 100%
+            }
+            .calculator tbody tr td {
+                width: 60px;
+            }
+            .displayVal {
+                width: 100%;
+                height: 30px;
+                background-color: lightcyan;
+                text-align: right;
+                font-size: medium;
+            }
         </style>
     </head>
     <body>
@@ -26,11 +40,55 @@
         <h2>3. Get ShoppingList
             <button onclick="shoppingList()">Let's do Shopping</button>
         </h2>
+        <h2>5. Manage Sales Department
+            <button onclick="getCommission()">Get Commission</button>
+        </h2>
         <h2>7. Print Prime Numbers
             <button onclick="printPrime()">Get Prime</button>
         </h2>
         <h3>Output:</h3>
         <p id = "output"></p>
-        <div id='something'></div>
+        <h2>4. Calculator</h2>
+        <table border="1" class="calculator">
+            <tr>
+                <td colspan="4"><input class="displayVal" type="text" id="displayValue"/></td>
+            </tr>
+            <tr>
+                <td><button onclick="enterVal()">AC</button></td>
+                <td><button onclick="enterVal('sqrt')">&#8730</button></td>
+                <td><button onclick="enterVal('%')">%</button></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><button onclick="enterVal('7')">7</button></td>
+                <td><button onclick="enterVal('8')">8</button></td>
+                <td><button onclick="enterVal('9')">9</button></td>
+                <td><button onclick="enterVal('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="enterVal('4')">4</button></td>
+                <td><button onclick="enterVal('5')">5</button></td>
+                <td><button onclick="enterVal('6')">6</button></td>
+                <td><button onclick="enterVal('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="enterVal('1')">1</button></td>
+                <td><button onclick="enterVal('2')">2</button></td>
+                <td><button onclick="enterVal('3')">3</button></td>
+                <td><button onclick="enterVal('*')">x</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="enterVal('.')">.</button></td>
+                <td><button onclick="enterVal('0')">0</button></td>
+                <td><button onclick="solve()">=</button></td>
+                <td><button onclick="enterVal('/')">/</button></td>
+            </tr>
+        </table>
+        <h2>6. Prompts for Number Greater Than 100
+            <button onclick="getPrompt()">Continous Prompt Magic</button>
+        </h2>
+        <h2>8. Arrow Function calls
+            <button onclick="ask('Do You Agree?')">Lets Check</button>
+        </h2>
     </body>
 </html>

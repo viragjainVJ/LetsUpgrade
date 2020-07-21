@@ -83,3 +83,61 @@ let printPrime = () =>{
     console.log(primeNumbers);
     document.getElementById("output").innerHTML = `Prime Number between 2 to ${input} are ${primeNumbers}`;
 }
+
+function enterVal(value) {
+    if(!value){
+        document.getElementById("displayValue").value = "";
+        return;
+    }
+    if(value === 'sqrt') {
+        solve();
+        let sqrt = Math.sqrt(document.getElementById("displayValue").value)
+        document.getElementById("displayValue").value = sqrt;
+        return;
+    }
+    if(value === '%') {
+        solve();
+        let number = document.getElementById("displayValue").value;
+        document.getElementById("displayValue").value = number/100;
+        return;
+    } 
+    document.getElementById("displayValue").value += value;
+}
+
+function solve() {
+    let x = document.getElementById("displayValue").value
+    let y = eval(x)
+    document.getElementById("displayValue").value = y
+}
+
+let getCommission = () => {
+    let sales = prompt('Enter sales made in a year: ', 1000);
+    let totalCommission = 0;
+
+    if(sales > 20000) {
+        totalCommission += (sales-20000)*0.1
+        sales = 20000;
+    }
+    if(sales > 10000 ) {
+        totalCommission += (sales-10000)*(0.07)
+        sales = 10000;
+    }
+    if(sales > 5000) {
+        totalCommission += (sales-5000)*(0.05)
+        sales = 5000
+    }
+    if(sales > 0){
+        totalCommission += (sales)*(0.02)
+        sales = 0
+    }
+    document.getElementById("output").innerHTML = `Total Commission for the Year: ${totalCommission}`;
+}
+
+let getPrompt = () => {
+    let num = prompt('enter', 100);
+    num && num < 100 ? getPrompt() : "";
+}
+
+let ask = (question) => {
+    (confirm(question) ? () => alert("You Agreed."): () => alert("You Cancelled the execution."))(); 
+}
