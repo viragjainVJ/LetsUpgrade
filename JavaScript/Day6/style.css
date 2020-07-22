@@ -1,0 +1,12 @@
+.welcomePage {
+    text-align: center;
+}
+.darkMode {
+    background-color: black;
+    color: white;
+}
+
+.digitalClock {
+    /* color: green; */
+    font-size: 60px;
+}

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Day6 Assignment1</title>
+    </head>
+    <body>
+        <h1>Background Color is being changed every 5 seconds</h1>
+        <script>
+            //Get Random Color
+            // setInterval(
+            //     function () {
+            //     var randomColor = Math.floor(Math.random()*16777215).toString(16);
+            //     document.body.style.backgroundColor = "#"+randomColor;
+            //     },5000);
+
+            //Using Color Array
+            var i = 0;
+            function change() {
+                var color = ["red", "blue", "brown", "green"];
+                document.body.style.backgroundColor = color[i];
+                i = (i + 1) % color.length;
+            }
+            setInterval(change, 5000);
+        </script>
+    </body>
+</html>

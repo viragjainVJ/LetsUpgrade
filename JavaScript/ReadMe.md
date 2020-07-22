@@ -14,3 +14,7 @@
 
 ## Day 5 Assignment
 ![Day5](Day5/Day5Assignment.PNG?raw=true)
+
+## Day 6 Assignment
+![Day6](Day6/Day6Assignment.PNG?raw=true)
+![Day6](Day6/Day6Assignment2.PNG?raw=true)
