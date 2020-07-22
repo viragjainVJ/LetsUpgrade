@@ -48,12 +48,18 @@ class Admin extends Moderator{
    deleteCourse(user, course){
        if(user.courses.includes(course))
        {
-           user.courses = user.courses.reduce((acc, val)=>{
-            if(val != course)    
-            acc.push(val)
-            return acc;
-           },[]);
+           //Using Reduce HOF
+        //    user.courses = user.courses.reduce((acc, val)=>{
+        //     if(val != course)    
+        //     acc.push(val)
+        //     return acc;
+        //    },[]);
+
+        //Using Filter HOF
+        user.courses = user.courses.filter(existingCourse => existingCourse != course)
            console.log(user.courses)
+       } else {
+           console.log(`User does not enrolled for the ${course}`)
        }
        return this;
    }
@@ -69,12 +75,13 @@ let users = [user1, user2, mod, admin];
 let user = users[0];
 user.login();
 console.log(user)
-mod.addCoins(user).addCoins(user1)
-mod.removeCoins(user).removeCoins(user1).addCoins(user)
+mod.addCoins(user).addCoins(user)
+mod.removeCoins(user).removeCoins(user).addCoins(user)
 
 admin.addCourse(user,'Javascript');
 admin.addCourse(user,'Python');
 
 admin.deleteCourse(user,'Javascript');
+admin.deleteCourse(user,'AI/ML');
 console.log(user)
 user.logout()
