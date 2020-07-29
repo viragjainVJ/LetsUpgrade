@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project</title>
+    <script defer src="todoList.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container" style="font-family: Arial, Helvetica, sans-serif;">
+        <h1>Todo List Application</h1>
+        <div style="display: flex; margin: 15px 0px;">
+            <input type="text" name="itemName" id="addtaskinput" class="form-control" style="width:60%;">
+            <input type="hidden" id="saveindex">
+            <button id="addtaskbtn" class="btn btn-info" style="margin: 0 10px 0 10px;">Add</button>
+            <button id="savetaskbtn" style="display: none; margin: 0 10px 0 10px;" class="btn btn-info">Save</button>
+            <button id="deleteAll" class="btn btn-danger">Delete All</button>
+        </div>
+        <table id="addedtasklist" class="tableLayout table table-striped"></table>
+        
+        </div>
+    </div>
+</body>
+</html>
