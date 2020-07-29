@@ -18,3 +18,6 @@
 ## Day 6 Assignment
 ![Day6](Day6/Day6Assignment.PNG?raw=true)
 ![Day6](Day6/Day6Assignment2.PNG?raw=true)
+
+## Mini Project Assignment
+![MiniProject](MiniProject/TodolistApplication.PNG?raw=true)
