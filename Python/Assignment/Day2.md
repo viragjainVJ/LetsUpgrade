@@ -50,3 +50,153 @@ lst.pop()
 lst.pop(2)
 print(lst)//[1,2,8,"lets"]
 ```
+
+- ## Dictionary
+Dictionary holds a pair of values, one being the Key and the other corresponding pair element being its Key:value. Values in a dictionary can be of any datatype and can be duplicated, whereas keys can’t be repeated and must be immutable.
+Dictionary keys are case sensitive, same name but different cases of Key will be treated distinctly.
+```
+dt = {1: 'code', 2: 'me', 3: 'again'} 
+print(dt) //{1: 'code', 2: 'me', 3: 'again'}
+dt1 = dict({1: 'code', 2: 'calmly', 3:'welcome'}) 
+print("\nDictionary with the use of dict(): ") 
+print(dt1) //{1: 'code', 2: 'calmly', 3: 'welcome'}
+  
+//Creating a Dictionary with each item as a Pair 
+dt2 = dict([(1, 'Codificar'), (2, 'For')]) 
+print("\nDictionary with each item as a pair: ") 
+print(dt2) //{1: 'Codificar', 2: 'For'}
+```
+1. copy() method
+Returns a shallow copy of the dictionary.
+```
+newDt = dt.copy()
+print(newDt) //{1: 'code', 2: 'me', 3: 'again'}
+```
+2. clear() method
+Removes all items from the dictionary.
+```
+text1 = {1: "python", 2: "learn"} 
+text2 = text1 
+  
+# Using clear makes both text1 and text2 
+# empty. 
+text1.clear() 
+  
+print('After removing items using clear()') 
+print(text1) //{}
+print(text2) //{}
+  
+text1 = {1: "one", 2: "two"} 
+text2 = text1 
+  
+# This makes only text1 empty. 
+text1 = {} 
+  
+print('After removing items by assigning {}') 
+print(text1) //{}
+print(text2) //{1: "one", 2: "two"}
+```
+3. pop() method
+Returns :
+Value associated to deleted key-value pair, if key is present.
+Default value if specified if key is not present.
+KeyError, if key not present and default value not specified.
+```
+test_dict = { "Nikhil" : 7, "Akshat" : 1, "Akash" : 2 } 
+   
+print ("The dictionary before deletion : " + str(test_dict)) //The dictionary before deletion : {'Nikhil': 7, 'Akshat': 1, 'Akash': 2}
+  
+# using pop to return and remove key-value pair. 
+pop_ele = test_dict.pop('Akash') 
+   
+print ("Value associated to poppped key is : " + str(pop_ele)) //Value associated to poppped key is : 2
+  
+print ("Dictionary after deletion is : " + str(test_dict)) //Dictionary after deletion is : {'Nikhil': 7, 'Akshat': 1}
+```
+4. update() method
+Returns: It doesn’t return any value but updates the Dictionary with elements from a dictionary object or an iterable object of key/value pairs.
+```
+Dictionary1 = { 'A': 'python', 'B': 'js' } 
+Dictionary2 = { 'B': 'java' } 
+  
+print(Dictionary1) //{ 'A': 'python', 'B': 'js' }
+  
+Dictionary1.update(Dictionary2) 
+print(Dictionary1) //{ 'A': 'python', 'B': 'java' }
+
+Dictionary1.update(C = 'js', D = 'ruby')
+print(Dictionary1) //{'A': 'python', 'B': 'java', 'C': 'js', 'D': 'ruby'}
+```
+5. keys() method
+A view object is returned that displays all the keys. This view object changes according to the changes in the dictionary.
+```
+print(Dictionary1.keys()) //dict_keys(['A', 'B', 'C', 'D'])
+```
+
+- ## Sets
+Set is an unordered collection of data type that is iterable, mutable and has no duplicate elements. The order of elements in a set is undefined though it may consist of various elements.
+
+The major advantage of using a set, as opposed to a list, is that it has a highly optimized method for checking whether a specific element is contained in the set.
+```
+st = set()
+print(st)
+st = set('mississipi')
+print(st)
+st = set(["keep", "calm", "keep", "coding"])
+print(st)
+Output:
+set()
+{'s', 'm', 'i', 'p'}
+{'keep', 'coding', 'calm'}
+```
+
+1. add() method
+Only one element at a time can be added to the set by using add() method, loops are used to add multiple elements at a time with the use of add() method.
+```
+st = set()
+st.add(1)
+st.add((6,7))
+st.add(9)
+for i in range(1, 6): 
+    st.add(i) 
+print(st)
+Output:
+{1, 2, 3, 4, 5, 9, (6, 7)}
+```
+2. update() method
+The update() method accepts lists, strings, tuples as well as other sets as its arguments. In all of these cases, duplicate elements are avoided
+```
+st.update([10,11])
+print(st) //{1, 2, 3, 4, 5, 9, 10, 11, (6, 7)}
+```
+3. remove() or discard() method
+remove() function but a KeyError arises if element doesn’t exist in the set. To remove elements from a set without KeyError, use discard(), if the element doesn’t exist in the set, it remains unchanged.
+```
+ set1 = set([1, 2, 3, 4, 5, 6,  
+            7, 8, 9, 10, 11, 12]) 
+print(set1) //{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}
+
+set1.remove(5) 
+set1.remove(6) 
+print(set1) //{1, 2, 3, 4, 7, 8, 9, 10, 11, 12}
+set1.discard(8) 
+set1.discard(9) 
+set1.discard(6)
+print(set1) //{1, 2, 3, 4, 7, 10, 11, 12}
+```
+4. pop() method
+Pop() function can also be used to remove and return an element from the set, but it removes only the last element of the set.
+```
+set1.pop()
+print(set1) //{2, 3, 4, 7, 10, 11, 12}
+```
+5. issubset() method
+Returns True if all elements of a set A are present in another set B which is passed as an argument and returns false if all elements not present.
+```
+A = {4, 1, 3, 5} 
+B = {6, 0, 4, 1, 5, 0, 3, 5} 
+print(A.issubset(B)) //True
+print(B.issubset(A)) //False
+```
+
+- ## Tuples
