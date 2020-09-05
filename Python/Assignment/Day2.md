@@ -7,7 +7,7 @@ Lists are a useful tool for preserving a sequence of data and further iterating 
 lst = []
 lst1 = [1,2,3, "LetsUpgrade", [4,5,6]]
 ```
-- Size Of List
+##### Size Of List
 ```
 len(lst) or len(lst1) //0 or 5
 ```
@@ -35,6 +35,7 @@ lst.extend([8, "lets", "welcome"])
 print(lst) //[1,2,3, 12, (5,6), 8, "lets", "welcome"]
 ```
 **Removing Elements of List**
+
 4. remove() method
 Remove method in List will only remove the first occurrence of the searched element.
 ```
