@@ -12,7 +12,8 @@ lst1 = [1,2,3, "LetsUpgrade", [4,5,6]]
 len(lst) or len(lst1) //0 or 5
 ```
 **Adding Elements to List**
-1. append() method
+1. *append() method*:
+
 Only one element at a time can be added to the list by using append() method, for addition of multiple elements with the append() method, loops are used. Tuples can also be added to the List with the use of append method because tuples are immutable. Unlike Sets, Lists can also be added to the existing list with the use of append() method.
 ```
 lst.append(1) 
@@ -22,13 +23,15 @@ print(lst) //[1,2,3]
 lst.append((5,6))
 print(lst) //[1,2,3,(5,6)]
 ```
-2. insert() method
+2. *insert() method*:
+
 For addition of element at the desired position, insert() method is used.
 ```
 lst.append(3, 12)
 print(lst) //[1,2,3, 12, (5,6)]
 ```
-3. extend() method
+3. *extend() method*:
+
 This method is used to add multiple elements at the same time at the end of the list.
 ```
 lst.extend([8, "lets", "welcome"])
@@ -36,14 +39,16 @@ print(lst) //[1,2,3, 12, (5,6), 8, "lets", "welcome"]
 ```
 **Removing Elements of List**
 
-4. remove() method
+4. *remove() method*:
+
 Remove method in List will only remove the first occurrence of the searched element.
 ```
 lst.remove(3)
 lst.remove(12)
 print(lst) //[1,2,(5,6), 8, "lets", "welcome"]
 ```
-5. pop() method
+5. *pop() method*:
+
 Pop() function can also be used to remove and return an element from the set, but by default it removes only the last element of the set, to remove element from a specific position of the List, index of the element is passed as an argument to the pop() method.
 ```
 lst.pop()
@@ -66,20 +71,21 @@ dt2 = dict([(1, 'Codificar'), (2, 'For')])
 print("\nDictionary with each item as a pair: ") 
 print(dt2) //{1: 'Codificar', 2: 'For'}
 ```
-1. copy() method
+1. *copy() method*:
+
 Returns a shallow copy of the dictionary.
 ```
 newDt = dt.copy()
 print(newDt) //{1: 'code', 2: 'me', 3: 'again'}
 ```
-2. clear() method
+2. *clear() method*:
+
 Removes all items from the dictionary.
 ```
 text1 = {1: "python", 2: "learn"} 
 text2 = text1 
   
-# Using clear makes both text1 and text2 
-# empty. 
+// Using clear makes both text1 and text2 empty. 
 text1.clear() 
   
 print('After removing items using clear()') 
@@ -89,14 +95,15 @@ print(text2) //{}
 text1 = {1: "one", 2: "two"} 
 text2 = text1 
   
-# This makes only text1 empty. 
+//This makes only text1 empty. 
 text1 = {} 
   
 print('After removing items by assigning {}') 
 print(text1) //{}
 print(text2) //{1: "one", 2: "two"}
 ```
-3. pop() method
+3. *pop() method*:
+
 Returns :
 Value associated to deleted key-value pair, if key is present.
 Default value if specified if key is not present.
@@ -106,14 +113,15 @@ test_dict = { "Nikhil" : 7, "Akshat" : 1, "Akash" : 2 }
    
 print ("The dictionary before deletion : " + str(test_dict)) //The dictionary before deletion : {'Nikhil': 7, 'Akshat': 1, 'Akash': 2}
   
-# using pop to return and remove key-value pair. 
+//using pop to return and remove key-value pair. 
 pop_ele = test_dict.pop('Akash') 
    
 print ("Value associated to poppped key is : " + str(pop_ele)) //Value associated to poppped key is : 2
   
 print ("Dictionary after deletion is : " + str(test_dict)) //Dictionary after deletion is : {'Nikhil': 7, 'Akshat': 1}
 ```
-4. update() method
+4. *update() method*:
+
 Returns: It doesn’t return any value but updates the Dictionary with elements from a dictionary object or an iterable object of key/value pairs.
 ```
 Dictionary1 = { 'A': 'python', 'B': 'js' } 
@@ -127,7 +135,8 @@ print(Dictionary1) //{ 'A': 'python', 'B': 'java' }
 Dictionary1.update(C = 'js', D = 'ruby')
 print(Dictionary1) //{'A': 'python', 'B': 'java', 'C': 'js', 'D': 'ruby'}
 ```
-5. keys() method
+5.*keys() method*:
+
 A view object is returned that displays all the keys. This view object changes according to the changes in the dictionary.
 ```
 print(Dictionary1.keys()) //dict_keys(['A', 'B', 'C', 'D'])
@@ -150,7 +159,8 @@ set()
 {'keep', 'coding', 'calm'}
 ```
 
-1. add() method
+1. *add() method*:
+
 Only one element at a time can be added to the set by using add() method, loops are used to add multiple elements at a time with the use of add() method.
 ```
 st = set()
@@ -163,13 +173,15 @@ print(st)
 Output:
 {1, 2, 3, 4, 5, 9, (6, 7)}
 ```
-2. update() method
+2. *update() method*:
+
 The update() method accepts lists, strings, tuples as well as other sets as its arguments. In all of these cases, duplicate elements are avoided
 ```
 st.update([10,11])
 print(st) //{1, 2, 3, 4, 5, 9, 10, 11, (6, 7)}
 ```
-3. remove() or discard() method
+3. *remove() or discard() method*:
+
 remove() function but a KeyError arises if element doesn’t exist in the set. To remove elements from a set without KeyError, use discard(), if the element doesn’t exist in the set, it remains unchanged.
 ```
  set1 = set([1, 2, 3, 4, 5, 6,  
@@ -184,13 +196,15 @@ set1.discard(9)
 set1.discard(6)
 print(set1) //{1, 2, 3, 4, 7, 10, 11, 12}
 ```
-4. pop() method
+4. *pop() method*:
+
 Pop() function can also be used to remove and return an element from the set, but it removes only the last element of the set.
 ```
 set1.pop()
 print(set1) //{2, 3, 4, 7, 10, 11, 12}
 ```
-5. issubset() method
+5. *issubset() method*:
+
 Returns True if all elements of a set A are present in another set B which is passed as an argument and returns false if all elements not present.
 ```
 A = {4, 1, 3, 5} 
