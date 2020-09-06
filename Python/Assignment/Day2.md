@@ -214,3 +214,208 @@ print(B.issubset(A)) //False
 ```
 
 - ## Tuples
+Tuples are created by placing sequence of values separated by ‘comma’ with or without the use of parentheses for grouping of data sequence.
+Creation of Python tuple without the use of parentheses is known as Tuple Packing.
+```
+Tuple1 = () 
+print (Tuple1) 
+   
+Tuple1 = ('Geeks', 'For') 
+print(Tuple1) 
+
+list1 = [1, 2, 4, 5, 6] 
+print(tuple(list1)) 
+ 
+Tuple1 = tuple('Geeks') 
+print(Tuple1) 
+
+Output:
+()
+('Geeks', 'For')
+(1, 2, 4, 5, 6)
+('G', 'e', 'e', 'k', 's')
+
+//Unpacking of Tuple
+a, b, c, d,e = Tuple1 
+print(a,b,c,d,e)
+```
+
+1. *del() method*:
+
+Tuples are immutable and hence they do not allow deletion of a part of it. Entire tuple gets deleted by the use of del() method.
+```
+Tuple1 = (0, 1, 2, 3, 4) 
+del Tuple1 
+  
+print(Tuple1) 
+```
+
+2. *max() method*:
+
+Returns the maximum value in the Tuple
+```
+tup = (0,1,2,3,4,5)
+print(max(tup)) //5
+```
+
+3. *min() method*:
+
+Returns the minimum value in the Tuple
+```
+tup = (0,1,2,3,4,5)
+print(min(tup)) //0
+```
+
+4. *sorted() method*:
+
+Returns the sorted list of Tuple.
+```
+Tuple1 = (2, 4, 3, 0, 1) 
+print(sorted(Tuple1)) //[0, 1, 2, 3, 4]
+print(type(sorted(Tuple1))) //<class 'list'>
+```
+
+5. *sum() method*:
+
+Returns the summation of elements in tuple.
+```
+Tuple1 = (2, 4, 3, 0, 1)
+print(sum(Tuple1)) //10
+```
+
+- ## Strings
+ Strings are arrays of bytes representing Unicode characters. However, Python does not have a character data type, a single character is simply a string with a length of 1. Square brackets can be used to access elements of the string.
+```
+String1 = 'Welcome to the Codificar World'
+print(String1) 
+  
+# Creating a String 
+# with double Quotes 
+String1 = "I'm a Codificar"
+print(String1) 
+  
+# Creating a String 
+# with triple Quotes 
+String1 = '''I'm a Codificar and I live in a world of "Tech"'''
+print(String1) 
+  
+# Creating String with triple 
+# Quotes allows multiple lines 
+String1 = '''Code 
+            For 
+            Life'''
+print(String1)
+
+Output:
+Welcome to the Codificar World
+I'm a Codificar
+I'm a Codificar and I live in a world of "Tech"
+Code 
+            For 
+            Life
+```
+
+1. *String slicing*:
+
+To access a range of characters in the String, method of slicing is used. Slicing in a String is done by using a Slicing operator (colon).
+```
+String1 = "CodeToLearn"
+print("Initial String: ")  
+print(String1) 
+  
+# Printing 3rd to 12th character 
+print(String1[3:11]) 
+  
+# Printing characters between  
+# 3rd and 2nd last character  
+print(String1[3:-2])
+
+Output:
+Initial String: 
+CodeToLearn
+eToLearn
+eToLea
+```
+
+2. *Formatting of Strings*:
+
+Strings in Python can be formatted with the use of format() method which is very versatile and powerful tool for formatting of Strings. Format method in String contains curly braces {} as placeholders which can hold arguments according to position or keyword to specify the order.
+```
+String1 = "{} {} {}".format('Code', 'For', 'Life') 
+print(String1) 
+  
+# Positional Formatting 
+String1 = "{1} {0} {2}".format('Code', 'For', 'Life') 
+print(String1) 
+  
+# Keyword Formatting 
+String1 = "{l} {f} {c}".format(c = 'Code', f = 'For', l = 'Life') 
+print(String1)
+
+Output:
+Code For Life
+For Code Life
+Life For Code
+```
+
+3. *endswith() method*:
+
+
+The endswith() method returns True if a string ends with the given suffix otherwise returns False.
+```
+str = "Code For Life"
+print(str.endswith("Lif"))
+print(str.endswith("Life"))
+print(str.endswith("Life", 9))
+print(str.endswith("Life", 9, 13))
+print(str.endswith("Life", 9, 12))
+
+output:
+False
+True
+True
+True
+False
+```
+
+4. *isdigit() method*:
+
+The isdigit() method returns “True” if all characters in the string are digits, Otherwise, It returns “False”. 
+```
+string = '15460'
+print(string.isdigit()) //True
+  
+ 
+string = '154ayush60'
+print(string.isdigit()) //False
+```
+
+5. *index() method*:
+
+Returns the position of the first occurrence of substring in a string.
+```
+voltages = ["001101 AC", "0011100 DC", "0011100 AC", "001 DC"]  
+  
+# initializing argument string  
+type = "AC"
+  
+# initializing bit-length calculator 
+sum_bits = 0
+  
+for i in voltages :  
+      
+    ch = i 
+      
+    if (ch[len(ch)-2]!='D'): 
+       # extracts the length of bits in string  
+       bit_len = ch.index(type)-1
+         
+       # adds to total 
+       sum_bits = sum_bits + bit_len 
+  
+print ("The total bit length of AC is : ",end="") 
+print (sum_bits) 
+
+output:
+The total bit length of AC is : 13
+```
